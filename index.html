@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ja">
+ 
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/img-preview.css">
+    <link rel="stylesheet" href="./css/status.css">
+ 
+    <title>Hello, world!</title>
+</head>
+ 
+<body>
+    <div class="alert alert-warning alert-dismissible fade show" id="statusalert" style="display:none" role="alert">
+        <strong>サーバーからエラーが返されました。</strong> ステータスページを確認してみてください。<a href="https://status.tokuzouserver.net">ここから確認</a>
+    </div>
+    <br>
+    <h1>完全無料の画像共有ストレージ</h1>
+    <br>
+ 
+    <div class="border col-7 align-items-center">
+        <br>
+        <h2>画像を保存</h2>
+        <br>
+        <div class="row">
+            <div class="col-md">
+                <form>
+                    <div class="form-group">
+                        <label class="form-label">形式：</label>
+                        <select class="form-control" id="form-selector" onchange="viewChange();">
+                            <option value="select1">URLで画像を保存する。</option>
+                            <option value="select2">画像ファイルを保存する。</option>
+                        </select>
+                    </div>
+                    <div class="form-group" id="img-file" style="display:none;">
+                        <br>
+                        <label class="form-label">ファイルを選択：</label>
+                        <input type="file" id="img-input" class="form-control" >
+                        <div id="preview"><img id="base64url" style="display:none"></img></div>
+                    </div>
+                    <div class="form-group"id="img-url">
+                        <br>
+                        <label class="form-label">URLを入力：</label>
+                        <input type="text" class="form-control" id="url-input" placeholder="https://example.com/">
+                    </div>
+                    <br>
+                    <div class="mb-3">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" >
+                          <label class="form-check-label">
+                            画像に個人情報は含まれていません。
+                          </label>
+                        </div>
+                      </div>
+                </form>
+            </div>
+        </div>
+        <div class="row center-block text-center">
+            <div class="col-1">
+            </div>
+            <div class="col-5">
+                <button type="button" class="btn btn-outline-secondary btn-block">閉じる</button>
+            </div>
+            <div class="col-5">
+                <button type="button" class="btn btn-outline-primary btn-block" value="button" id="form-ckick">画像を保存</button>
+            </div>
+        </div>
+        <div class="col-1">
+        </div>
+        <hr>
+        <br>
+        <h2>画像URL</h2>
+        <div class="row">
+            <div class="col-md">
+                <input type="text" id="output-url" class="form-control" placeholder="https://img.tokuzouserver.net/id.png" disabled>
+            </div>
+        </div>
+        <div class="col-1">
+        </div>
+        <br>
+        <br>
+        <hr>
+        <br>
+        <h2>サーバーステータス</h2>
+        <div class="row">
+            <div class="col-md">
+                <div id="statusbox"><p id="statusup" class="statusmoji">サービスは正常に稼働しています。</p><p id="statusdown"style="display:none"class="statusmoji">サービスがダウンしている可能性があります。</p></div>
+            </div>
+        </div>
+        <br>
+    </div>
+ 
+    <!-- Optional JavaScript -->
+    <script src="./js/serverstatus.js"></script>
+    <script src="./js/img-preview.js"></script>
+    <script src="./js/optionchange.js"></script>
+    <script src="./js/img-post.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+ 
+</html>

@@ -1,0 +1,12 @@
+#statusbox {
+    width: 45vh;               /* 幅指定 */
+    height: 5vh;              /* 高さ指定 */
+    border: solid 2px transparent;     /* 枠線指定 */
+    background-color: rgb(41, 225, 71);     /* 背景色指定 */
+    border-radius: 10px;        /* 角丸指定 */
+}
+.statusmoji{
+    text-align: center;
+    color: #fff;
+    font-weight: 900;
+}
